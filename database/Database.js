@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize');
-const connection = new Sequelize('railway','root','8ZpEgitN4pAx0Avwbui4',{
-    host: 'containers-us-west-83.railway.app',
+const connection = new Sequelize('bancoroot','root','lucas@98623457',{
+    host: 'localhost',
     dialect: 'mysql'
 });
 module.exports = connection;

@@ -1,0 +1,41 @@
+<a href="/admin/insert/profs"> voltar </a>
+<table style="width: 100%;">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nome</th>
+            <th>Link-Foto</th>
+            <th>Area</th>
+            <th>AreaIcone</th>
+            <th>Sub-areaIcone</th>
+            <th>Sub-area</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% profs.forEach(prof => { %>
+            <tr>
+                <th><%=prof.id%></th>
+                <th><%=prof.nome%></th>
+                <th><a href="https://<%=prof.linkFoto%>"><%=prof.linkFoto%></a></th>
+                <th><%=prof.area%></th>
+                <th><%=prof.areaIcon%></th>
+                <th><%=prof.subArea%></th>
+                <th><%=prof.SubAreaIcon%></th>
+                <th>
+                    <a href="/admin/prof/edit">editar</a>
+                    <form style="display: inline;" method = 'POST' action="/admin/delete/profs">
+                        <button>DELETAR</button>
+                        <input type="hidden" name = id value="<%= prof.id %>">
+                    </form>
+                </th>
+            </tr>
+        <% }) %>
+    </tbody>
+    
+</table>
+
+<style>
+     th {
+      border:1px solid black;
+    }
+    </style>

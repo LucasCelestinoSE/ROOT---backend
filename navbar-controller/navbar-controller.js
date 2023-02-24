@@ -17,7 +17,5 @@ router.get('/forum', (req,res) =>{
 router.get('/contato', (req,res) =>{
     res.render('navbar/contact.ejs')
 })
-router.get('/teste', (req,res) => {
-    res.render('teste.ejs')
-})
+
 module.exports = router

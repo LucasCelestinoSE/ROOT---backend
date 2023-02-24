@@ -5,6 +5,7 @@
     const navbar_controller = require('./navbar-controller/navbar-controller')
     const connection = require('./database/Database');
     const painel_controller = require('./painel-controller/painelController')
+    const Profs = require('./painel-controller/Profs')
 // DB
     // O catch serve para pegar o erro da aplicação.
     connection.authenticate().then(() => {
@@ -22,8 +23,9 @@
 
     // body parser
 
-    //app.use(bodyParser.urlencoded({ extended: true }))
-    //app.use(bodyParser.json())
+    
+    app.use(bodyparser.urlencoded({extended: true}))
+    app.use(bodyparser.json())
 
 // * Rotas
     app.use('/', navbar_controller)
